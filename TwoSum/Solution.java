@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class Solution {
+public class Solution {
     public int[] twoSum(int[] input, int target ) {
         Map<Integer, Integer> values = new HashMap<>();
         for (int i=0; i < input.length; i++){
@@ -9,7 +9,7 @@ class Solution {
             if(values.containsKey(compliment)){
                 return new int[] {values.get(compliment), i};
             }
-            values.put(compliment, input[i]);
+            values.put(input[i], i );
         }
         throw new IllegalArgumentException("No matching sum found");
     }
